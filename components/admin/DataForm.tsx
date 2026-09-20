@@ -488,7 +488,7 @@ export function DataForm() {
       {/* Pembayaran */}
       <Card
         title="3. Uang muka & pembayaran"
-        intro="Langkah Cara Pesan di halaman menu bilang DP mengunci jadwal dapur, tapi belum ada angkanya. Isi yang berlaku di tempat Anda."
+        intro="Website tidak mencantumkan angka uang muka, semuanya disebut dibicarakan saat chat. Kalau mau nominalnya tampil, isi yang berlaku di tempat Anda."
       >
         <Field label="DP berapa?" hint="Boleh persen atau rupiah tetap, contoh 30% atau Rp 500.000.">
           <input

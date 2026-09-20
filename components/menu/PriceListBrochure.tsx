@@ -38,7 +38,7 @@ export function PriceListBrochure() {
                 layout="stack"
                 eyebrow="Brosur resmi"
                 title="Brosur price list Nur Marisa Catering"
-                description="Seluruh daftar harga kami, halaman per halaman, persis seperti brosur yang kami bagikan ke pelanggan."
+                description="Seluruh daftar harga kami, halaman per halaman, sama seperti brosur yang kami bagikan ke pelanggan."
               />
 
               <div className="mt-8 flex flex-col items-start gap-3">

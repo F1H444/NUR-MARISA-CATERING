@@ -4,7 +4,8 @@ Status terakhir diperbarui: **20 September 2026**, setelah jawaban dari halaman
 `/isi-data` dipasang ke website, dan setelah keputusan soal ulasan (bagian 3).
 
 Sebagian besar data yang dulu belum pasti **sudah terisi dan sudah terpasang** (bagian 1).
-Sisanya masih menunggu Anda (bagian 2), plus keputusan soal testimoni yang baru (bagian 3).
+Sisanya masih menunggu Anda (bagian 2), plus keputusan soal testimoni (bagian 3) dan
+langkah SEO yang hanya bisa Anda kerjakan, terutama klaim Google Business Profile (bagian 6).
 
 Legenda: **🔴 perlu keputusan** · **🟡 penting kalau ada** · **🟢 pelengkap**.
 
@@ -113,7 +114,40 @@ Kalau salah satu sebenarnya benar dan ada buktinya, tinggal bilang, saya pasang 
 
 ---
 
-## 6. Setelah Anda mengirim sisa bagian 2
+## 6. SEO: yang sudah dikerjakan, dan yang hanya bisa Anda kerjakan
+
+**Sudah dikerjakan di dalam website** (tidak perlu Anda apa-apakan):
+
+- Judul dan deskripsi halaman memuat "catering Banjarmasin" dan harga mulai.
+- Keterangan bisnis untuk Google: nama, alamat, telepon, jam buka, area layanan, dan daftar
+  33 menu beserta harganya.
+- Section Tanya Jawab berisi 10 pertanyaan yang sering ditanyakan, lengkap dengan jawaban yang
+  bisa muncul langsung di hasil pencarian.
+- `robots.txt`, `sitemap.xml`, dan gambar pratinjau saat tautan dibagikan.
+
+**Yang hanya bisa Anda kerjakan, dan ini yang paling menentukan.** Untuk pencarian seperti
+"catering banjarmasin", Google hampir selalu menampilkan kotak peta di paling atas. Tempat di
+kotak itu ditentukan oleh **Google Business Profile**, bukan oleh kode website. Urutannya:
+
+| # | Langkah | Kenapa penting |
+|---|---|---|
+| 6.1 | **Klaim & verifikasi Google Business Profile** di [business.google.com](https://business.google.com) 🔴 | Tanpa ini, website sebaik apa pun tidak akan masuk tiga besar kotak peta |
+| 6.2 | **Samakan alamat & telepon persis** dengan yang ada di website: Jl. Perdagangan, Komplek HKSN Permai Blok 1A No. 35, RT 26, Banjarmasin 70125, telepon +62 858-2053-1295 🔴 | Google mencocokkan tulisan di website dengan profil bisnis. Beda satu karakter bisa menurunkan kepercayaan |
+| 6.3 | **Kategori utama: Caterer**, tambahkan "Layanan katering" dan "Toko kue" kalau ada | Kategori menentukan untuk kata kunci apa bisnis Anda boleh muncul |
+| 6.4 | **Area layanan & jam buka** diisi sama seperti di website | Bagian dari kecocokan data |
+| 6.5 | **Unggah 10 sampai 20 foto asli** (hidangan, meja acara, dapur, logo) 🟡 | Profil berfoto jauh lebih sering diklik daripada yang kosong |
+| 6.6 | **Minta ulasan pelanggan**, terutama yang pernah memesan lewat Anda 🟡 | Jumlah dan kesegaran ulasan termasuk faktor peringkat kotak peta |
+| 6.7 | **Daftarkan website di [Google Search Console](https://search.google.com/search-console)** lalu kirim `https://nurmarisacatering.biz.id/sitemap.xml` 🟡 | Supaya halaman cepat terindeks. Kode verifikasinya bisa dipasang lewat `.env.local` (lihat README) |
+| 6.8 | **Daftar di direktori lokal** (Google Business, Instagram, Facebook, dan direktori UMKM Banjarmasin) 🟢 | Menambah jalur orang menemukan bisnis Anda |
+
+Satu hal yang jujur perlu dikatakan: **tidak ada yang bisa menjamin peringkat 1.** Yang bisa
+dilakukan adalah membuat website-nya rapi dan informatif, lalu memastikan profil Google-nya
+lengkap. Peringkat ditentukan Google dari gabungan keduanya, dan berubah dari waktu ke waktu.
+Yang jelas, website ini sekarang sudah menyiapkan semua bagian yang dibaca Google.
+
+---
+
+## 7. Setelah Anda mengirim sisa bagian 2
 
 1. Testimoni asli saya susun jadi section "Kata Mereka" di halaman utama, lengkap dengan nama
    akunnya, dan bahasanya saya rapikan tanpa mengubah makna.

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowRight, BadgeCheck, Leaf, MessageCircle, Soup, Truck, Wallet } from "lucide-react";
+import { ArrowRight, BadgeCheck, ClipboardList, Leaf, MessageCircle, Soup, Truck, Wallet } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { CountUp } from "@/components/ui/CountUp";
 import { Container } from "@/components/ui/Section";
@@ -7,11 +7,11 @@ import { Reveal } from "@/components/ui/Reveal";
 import { formatRupiah, lowestPiringanPrice } from "@/data/menu";
 import { site, stats, whatsappUrl } from "@/data/site";
 
-/** Tiga hal yang bisa dicek sendiri: ketentuan di price list, free ongkir, dan
- *  sertifikat halal. */
+/** Tiga hal yang bisa dicek sendiri: dua di antaranya tercetak di price list,
+ *  satu dari keterangan pemilik (sertifikat halal). */
 const trustPoints = [
   { icon: Soup, label: "Piringan full service" },
-  { icon: Truck, label: "Free ongkir Banjarmasin" },
+  { icon: ClipboardList, label: "Minimal order mulai 100 pax" },
   { icon: BadgeCheck, label: "Bersertifikat halal" },
 ];
 
@@ -30,18 +30,19 @@ export function Hero() {
             </Reveal>
 
             <Reveal delay={80}>
-              <h1 className="mt-6 text-[2.5rem] leading-[1.05] font-semibold text-cream-50 sm:text-5xl lg:text-[3.75rem]">
-                Masakan rumahan yang pantas
-                <span className="text-gold-300"> untuk acara besar.</span>
+              {/* Ukuran di layar kecil ditahan di 2.25rem: judulnya memuat nama kota
+                  untuk keperluan pencarian, jadi tanpa ini barisnya jadi terlalu banyak. */}
+              <h1 className="mt-6 text-[2.25rem] leading-[1.08] font-semibold text-cream-50 sm:text-[2.75rem] lg:text-[3.75rem]">
+                Masakan rumahan untuk acara besar
+                <span className="text-gold-300"> di {site.city}.</span>
               </h1>
             </Reveal>
 
             <Reveal delay={160}>
               <p className="mt-6 max-w-xl text-base leading-relaxed text-ash sm:text-lg">
-                {site.name} menyiapkan paket piringan, prasmanan, nasi kotak, cemilan, sampai
-                aqiqah untuk resepsi, rapat kantor, syukuran, atau kumpul keluarga. Harga dan isi
-                tiap paketnya tertulis lengkap di brosur price list kami, jadi Anda bisa cek dulu
-                sebelum memesan.
+                {site.name} siap menyiapkan piringan, prasmanan, nasi kotak, cemilan, sampai
+                aqiqah untuk acara di {site.city} dan sekitarnya. Semua harga dan isi paketnya
+                tertulis di brosur price list kami, silakan dicek dulu sebelum memesan.
               </p>
             </Reveal>
 
@@ -124,7 +125,7 @@ export function Hero() {
                     </p>
                     <p className="mt-1.5 text-[0.6875rem] leading-snug text-forest-900/80 sm:text-xs">
                       per piringan
-                      <span className="mt-0.5 block">sesuai price list</span>
+                      <span className="mt-0.5 block">dari brosur kami</span>
                     </p>
                   </div>
                 </div>
@@ -146,10 +147,10 @@ export function Hero() {
                   </span>
                   <div>
                     <p className="text-sm font-semibold text-cream-50">
-                      Free ongkir se-Banjarmasin
+                      Free ongkir piringan & nasi kotak
                     </p>
                     <p className="mt-0.5 text-xs leading-snug text-ash">
-                      Sebagian besar paket minimal 100 pax, dan prasmanan sudah full service.
+                      Ongkir wilayah Banjarmasin gratis, sesuai catatan di brosur.
                     </p>
                   </div>
                 </div>

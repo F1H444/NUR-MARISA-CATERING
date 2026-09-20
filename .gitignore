@@ -42,3 +42,11 @@ next-env.d.ts
 
 # jawaban form isi data milik pemilik bisnis (/isi-data), jangan ikut ter-commit
 /isi-data.json
+
+# berkas kerja alat preview: log, pid, dan id project berubah sendiri tiap kali
+# server dinyalakan, jadi tidak ada gunanya ikut ter-commit. run.md tetap
+# dilacak karena isinya cara menjalankan server untuk project ini.
+/.freebuff/preview-*.log
+/.freebuff/preview-*.log.err
+/.freebuff/preview.pid
+/.freebuff/project-id

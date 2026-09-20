@@ -13,8 +13,8 @@ type CtaBannerProps = {
 
 /** Pita penutup: permukaan emas penuh supaya halaman berakhir dengan aksen kuat. */
 export function CtaBanner({
-  title = "Siap pesan untuk acara Anda?",
-  description = "Kirim tanggal, jumlah tamu, dan lokasinya. Kami balas dengan estimasi harga dan rekomendasi paket yang paling pas.",
+  title = "Mau pesan untuk acara Anda?",
+  description = "Kirim tanggal, jumlah tamu, dan lokasinya. Nanti kami balas dengan estimasi harga dan paket yang paling pas.",
   showMenuButton = true,
 }: CtaBannerProps) {
   return (

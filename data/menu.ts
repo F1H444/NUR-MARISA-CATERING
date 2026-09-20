@@ -28,7 +28,10 @@ export type MenuItem = {
   /** Rincian isi paket sesuai price list. */
   includes?: string[];
   minOrder?: string;
-  image: string;
+  /** Foto menu dari brosur. Hanya diisi untuk hidangan yang fotonya tampil di
+   *  website (hero, section Kenalan, atau galeri); sisanya sengaja dikosongkan
+   *  supaya tidak ada data yang menunjuk berkas yang tidak ada. */
+  image?: string;
   tags: string[];
   /** Menu unggulan yang tampil di Halaman Utama. */
   featured?: boolean;
@@ -39,6 +42,11 @@ export type MenuItem = {
 function menuPhoto(id: string) {
   return `/images/menu/${id}.jpg`;
 }
+
+/* Catatan: hanya hidangan yang fotonya benar-benar tampil di website yang
+ * memakai `image`. Jadi tidak ada item menu yang menunjuk berkas gambar yang
+ * sudah dihapus. Kalau nanti semua foto mau dipasang lagi, jalankan dua skrip
+ * di README (extract lalu build) dan kembalikan baris `image`-nya. */
 
 export const menuCategories: MenuCategory[] = [
   {
@@ -88,7 +96,7 @@ export const menuCategories: MenuCategory[] = [
     id: "spesial",
     name: "Menu Spesial",
     description: "Porsi besar untuk melengkapi meja saji, termasuk masakan khas Banjar.",
-    note: "Minimal order 100 pax.",
+    note: "Minimal order 100 pax, tercetak di halaman bakso. Rujak buah dan mie habang dijual per nampan atau porsi besar.",
   },
   {
     id: "aqiqah",
@@ -247,7 +255,6 @@ export const menuItems: MenuItem[] = [
       "Sendok",
     ],
     minOrder: "Minimal 100 pax",
-    image: menuPhoto("nk-premium"),
     tags: ["Free ongkir Banjarmasin"],
     featured: true,
   },
@@ -260,7 +267,6 @@ export const menuItems: MenuItem[] = [
     description: "Batagor goreng dengan bumbu kacang, digoreng pada hari pengiriman.",
     price: 7000,
     unit: "porsi",
-    image: menuPhoto("cm-batagor"),
     tags: [],
   },
   {
@@ -270,7 +276,6 @@ export const menuItems: MenuItem[] = [
     description: "Jagung susu keju manis gurih, disajikan dalam cup.",
     price: 5000,
     unit: "porsi",
-    image: menuPhoto("cm-jasuke"),
     tags: [],
   },
   {
@@ -280,7 +285,6 @@ export const menuItems: MenuItem[] = [
     description: "Dimsum kukus berisi ayam, dikemas per porsi siap santap.",
     price: 3000,
     unit: "porsi",
-    image: menuPhoto("cm-dimsum"),
     tags: [],
   },
   {
@@ -300,7 +304,6 @@ export const menuItems: MenuItem[] = [
     description: "Pentol sapi berkuah pedas khas, cocok untuk tamu yang suka pedas.",
     price: 6000,
     unit: "porsi",
-    image: menuPhoto("cm-pentol"),
     tags: ["Pedas"],
   },
   {
@@ -310,7 +313,6 @@ export const menuItems: MenuItem[] = [
     description: "Kebab isi daging dan sayur dengan saus mayo, dibungkus per porsi.",
     price: 7000,
     unit: "porsi",
-    image: menuPhoto("cm-kebab"),
     tags: [],
   },
 
@@ -332,7 +334,6 @@ export const menuItems: MenuItem[] = [
     description: "Puding lembut dengan saus vla, tersedia beberapa pilihan rasa.",
     price: null,
     unit: "box",
-    image: menuPhoto("ku-puding"),
     tags: [],
   },
   {
@@ -342,7 +343,6 @@ export const menuItems: MenuItem[] = [
     description: "Kue sus isi vla manis dengan kulit renyah.",
     price: null,
     unit: "box",
-    image: menuPhoto("ku-kue-sus"),
     tags: [],
   },
   {
@@ -352,7 +352,6 @@ export const menuItems: MenuItem[] = [
     description: "Risol mayones isi ayam dan telur, digoreng saat hari pengiriman.",
     price: null,
     unit: "box",
-    image: menuPhoto("ku-risol"),
     tags: [],
   },
   {
@@ -362,7 +361,6 @@ export const menuItems: MenuItem[] = [
     description: "Pie buah dengan vla lembut dan aneka buah segar di atasnya.",
     price: null,
     unit: "box",
-    image: menuPhoto("ku-pie-buah"),
     tags: [],
   },
   {
@@ -372,7 +370,6 @@ export const menuItems: MenuItem[] = [
     description: "Aneka kue basah tradisional, pilihan jenis menyesuaikan permintaan.",
     price: null,
     unit: "box",
-    image: menuPhoto("ku-kue-basah"),
     tags: [],
   },
 
@@ -384,7 +381,6 @@ export const menuItems: MenuItem[] = [
     description: "Kopi susu gula aren, disajikan dingin dalam gelas.",
     price: 10000,
     unit: "gelas",
-    image: menuPhoto("mn-kopi-susu"),
     tags: [],
   },
   {
@@ -394,7 +390,6 @@ export const menuItems: MenuItem[] = [
     description: "Es teler dengan kelapa muda, nangka, dan susu.",
     price: 10000,
     unit: "gelas",
-    image: menuPhoto("mn-es-teler"),
     tags: [],
   },
   {
@@ -404,7 +399,6 @@ export const menuItems: MenuItem[] = [
     description: "Thai tea creamy dengan es batu, manisnya bisa disesuaikan.",
     price: 7000,
     unit: "gelas",
-    image: menuPhoto("mn-thai-tea"),
     tags: [],
   },
   {
@@ -414,7 +408,6 @@ export const menuItems: MenuItem[] = [
     description: "Es dawet gula merah dengan santan dan cincau.",
     price: 6000,
     unit: "gelas",
-    image: menuPhoto("mn-es-dawet"),
     tags: [],
   },
   {
@@ -424,7 +417,6 @@ export const menuItems: MenuItem[] = [
     description: "Matcha latte dingin dengan susu segar.",
     price: 7000,
     unit: "gelas",
-    image: menuPhoto("mn-matcha"),
     tags: [],
   },
   {
@@ -434,7 +426,6 @@ export const menuItems: MenuItem[] = [
     description: "Jus buah segar tanpa pemanis tambahan, pilihan buah menyesuaikan musim.",
     price: 7000,
     unit: "gelas",
-    image: menuPhoto("mn-jus-buah"),
     tags: [],
   },
 
@@ -446,7 +437,6 @@ export const menuItems: MenuItem[] = [
     description: "Es sarang burung dalam termos besar, disendok sendiri oleh tamu.",
     price: 300000,
     unit: "termos",
-    image: menuPhoto("et-sarang-burung"),
     tags: [],
   },
   {
@@ -456,7 +446,6 @@ export const menuItems: MenuItem[] = [
     description: "Es melon segar dengan sirup dan susu dalam termos.",
     price: 300000,
     unit: "termos",
-    image: menuPhoto("et-melon"),
     tags: [],
   },
   {
@@ -490,7 +479,6 @@ export const menuItems: MenuItem[] = [
     price: 300000,
     unit: "nampan",
     includes: ["Lengkap piring dan garpu"],
-    image: menuPhoto("sp-rujak"),
     tags: [],
   },
   {
@@ -529,13 +517,20 @@ export const menuItems: MenuItem[] = [
       "Bawang goreng",
       "Krupuk",
     ],
-    image: menuPhoto("aq-kambing"),
     tags: ["Mulai dari 3,7 juta"],
     featured: true,
   },
 ];
 
-export const featuredMenu = menuItems.filter((item) => item.featured);
+/** Harga terendah di satu kategori, dihitung dari data menu. Dipakai untuk
+ *  label "mulai dari" dan untuk structured data, jadi angkanya selalu ikut
+ *  kalau harga di brosur berubah. */
+export function lowestPriceIn(category: MenuCategoryId) {
+  return menuItems.reduce<number>((lowest, item) => {
+    if (item.category !== category || item.price === null) return lowest;
+    return Math.min(lowest, item.price);
+  }, Number.POSITIVE_INFINITY);
+}
 
 /** Harga piringan termurah di price list, dipakai sebagai patokan "mulai dari"
  *  pada kartu harga di hero. Sengaja dibatasi ke kategori piringan supaya label
@@ -548,10 +543,6 @@ export const lowestPiringanPrice = menuItems.reduce<number>(
       : lowest,
   Number.POSITIVE_INFINITY,
 );
-
-export function categoryName(id: MenuCategoryId) {
-  return menuCategories.find((category) => category.id === id)?.name ?? id;
-}
 
 export function formatRupiah(value: number) {
   return new Intl.NumberFormat("id-ID", {

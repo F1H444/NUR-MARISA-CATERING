@@ -33,14 +33,18 @@ export function About() {
             </div>
           </Reveal>
 
-          {/* Narasi */}
+          {/* Narasi. Heading sengaja dibuat bertumpuk dengan ukuran rapat: kolom ini
+              hanya selebar 5/12 grid, jadi kalau dipisah dua kolom judulnya terpecah
+              jadi empat baris pendek dan terlihat berantakan. */}
           <Reveal variant="right" delay={100} className="lg:col-span-5">
-            <div className="flex h-full flex-col justify-center rounded-4xl border border-forest-800 bg-forest-900 p-7 sm:p-9">        <SectionHeading
-          eyebrow={about.eyebrow}
-          title={about.title}
-          description={about.description}
-        />
-              <div className="mt-5 space-y-4 text-sm leading-relaxed text-ash sm:text-[0.9375rem]">
+            <div className="flex h-full min-w-0 flex-col justify-center rounded-4xl border border-forest-800 bg-forest-900 p-7 sm:p-9">
+              <SectionHeading
+                layout="stack"
+                size="compact"
+                eyebrow={about.eyebrow}
+                title={about.title}
+              />
+              <div className="mt-6 space-y-4 text-sm leading-relaxed text-ash sm:text-[0.9375rem]">
                 {about.paragraphs.map((paragraph) => (
                   <p key={paragraph}>{paragraph}</p>
                 ))}

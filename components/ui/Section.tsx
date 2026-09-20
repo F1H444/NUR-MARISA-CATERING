@@ -34,6 +34,7 @@ export function SectionHeading({
   align = "left",
   tone = "light",
   layout = "split",
+  size = "default",
   className = "",
 }: {
   eyebrow?: string;
@@ -46,6 +47,8 @@ export function SectionHeading({
   tone?: "dark" | "light";
   /** "split" menaruh judul di kolom kiri dan deskripsi di kolom kanan pada layar besar. */
   layout?: "stack" | "split";
+  /** "compact" mengecilkan judul, dipakai kalau heading berada di dalam kolom sempit. */
+  size?: "default" | "compact";
   className?: string;
 }) {
   const isLight = tone === "light";
@@ -68,7 +71,9 @@ export function SectionHeading({
   const titleNode = (
     <h2
       className={[
-        "text-[2rem] leading-[1.1] font-semibold sm:text-4xl lg:text-[2.9rem]",
+        size === "compact"
+          ? "text-[1.75rem] leading-[1.15] font-semibold sm:text-[2rem] lg:text-[2.25rem]"
+          : "text-[2rem] leading-[1.1] font-semibold sm:text-4xl lg:text-[2.9rem]",
         isLight ? "text-cream-50" : "text-forest-950",
       ].join(" ")}
     >

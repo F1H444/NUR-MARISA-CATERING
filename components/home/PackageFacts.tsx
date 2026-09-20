@@ -17,7 +17,7 @@ export function PackageFacts() {
         <SectionHeading
           eyebrow="Ketentuan & Fasilitas"
           title="Semua ketentuan kami, apa adanya"
-          description="Disalin langsung dari brosur price list resmi, jadi yang Anda baca di sini sama persis dengan yang kami cetak."
+          description="Semua poin di bawah ini ada di brosur price list kami, bukan ketentuan tambahan."
           action={
             <Button
               href="/menu#price-list"
@@ -44,8 +44,8 @@ export function PackageFacts() {
                     Sumber: brosur resmi kami
                   </p>
                   <p className="mt-3 text-sm leading-relaxed text-forest-200">
-                    Semua angka di samping disalin dari price list {priceListFile.pages} halaman
-                    milik kami sendiri. Brosur itu bisa Anda buka halaman per halaman di halaman
+                    Semua angka di sampingnya disalin dari price list kami yang isinya {" "}
+                    {priceListFile.pages} halaman. Brosurnya bisa dibuka halaman per halaman di
                     menu, atau diunduh sebagai PDF.
                   </p>
 
@@ -113,8 +113,8 @@ export function PackageFacts() {
             <p className="mt-5 flex gap-3 rounded-4xl border border-forest-800 bg-forest-950 px-6 py-5 text-xs leading-relaxed text-ash">
               <ClipboardList size={16} className="mt-0.5 shrink-0 text-gold-400" aria-hidden />
               <span>
-                Masih ada yang mau ditanyakan soal ketentuan, atau ingin menyesuaikan paket dengan
-                acara Anda? Tanya saja sebelum memesan. {site.paymentNote}
+                Masih ada yang mau ditanyakan soal ketentuan, atau mau menyesuaikan paket dengan
+                acaranya? Tanya saja dulu sebelum memesan. {site.paymentNote}
               </span>
             </p>
           </div>

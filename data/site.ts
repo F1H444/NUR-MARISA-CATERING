@@ -17,6 +17,10 @@ const whatsappNumber = "6285820531295";
 /** Versi tampilan dari nomor yang sama, supaya mudah dibaca pengunjung. */
 const whatsappLabel = "+62 858-2053-1295";
 
+/** Alamat resmi website. Dipakai metadata, sitemap, robots, dan structured data,
+ *  jadi semuanya menunjuk ke satu domain yang sama. */
+export const siteUrl = "https://nurmarisacatering.biz.id";
+
 /** Nama bisnis seperti yang terdaftar di Google Maps.
  *  Dipakai untuk peta dan tombol petunjuk arah supaya keduanya menunjuk ke
  *  kartu bisnis resmi kami. Kalau dipatok ke koordinat hasil hitung sendiri,
@@ -27,6 +31,11 @@ export const googleMapsQuery = "Nur Marisa Catering Banjarmasin";
  *  jadi pelanggan diantar ke titik yang sama seperti saat mereka mencari
  *  sendiri nama Nur Marisa Catering di Google Maps. */
 export const googleMapsDirectionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(googleMapsQuery)}`;
+
+/** Tautan ke kartu bisnis kami di Google Maps. Dipakai sebagai `hasMap` dan
+ *  `sameAs` pada structured data supaya Google bisa mencocokkan website ini
+ *  dengan profil bisnisnya. */
+export const googleMapsPlaceUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(googleMapsQuery)}`;
 
 /** Data kontak, narasi, dan pengaturan dasar bisnis.
  *  Semua yang tampil di website diambil dari sini supaya mudah diubah. */
@@ -40,7 +49,7 @@ export const site = {
   /** Tahun dapur ini mulai menerima pesanan. */
   foundedYear: 2017,
   description:
-    "Dari paket piringan, prasmanan, nasi kotak, sampai cemilan, es termos, dan aqiqah. Semuanya bisa dipesan untuk acara keluarga, kantor, atau syukuran di Banjarmasin dan sekitarnya.",
+    "Mulai paket piringan, prasmanan, nasi kotak, sampai cemilan, es termos, dan aqiqah. Bisa dipesan untuk acara keluarga, kantor, atau syukuran di Banjarmasin dan sekitarnya.",
   city: "Banjarmasin",
   address:
     "Jl. Perdagangan, Komplek HKSN Permai Blok 1A No. 35, RT 26, Alalak Utara, Banjarmasin Utara, Banjarmasin 70125",
@@ -52,11 +61,11 @@ export const site = {
   /** Jam dapur buka. Pemilik hanya menyebut jam hari kerja. */
   operationalHours: [{ day: "Senin - Jumat", time: "07.00 - 21.00" }],
   orderNote:
-    "Sebagian besar paket minimal 100 pax, dan free ongkir untuk acara di Banjarmasin.",
+    "Sebagian besar paket minimal 100 pax. Piringan dan nasi kotak free ongkir se-Banjarmasin.",
   /** Uang muka dan cara bayar sengaja tidak dijanjikan di website.
    *  Pemilik memutuskan semuanya dibicarakan langsung saat pemesanan. */
   paymentNote:
-    "Uang muka, cara bayar, dan pelunasan kami bicarakan langsung lewat WhatsApp saat pesanan dikonfirmasi, menyesuaikan jumlah dan tanggal acaranya.",
+    "Soal uang muka, cara bayar, dan pelunasan, kami bicarakan langsung lewat WhatsApp saat pesanan dikonfirmasi, menyesuaikan jumlah tamu dan tanggal acaranya.",
   socials: [
     {
       label: "Instagram",
@@ -65,8 +74,9 @@ export const site = {
     },
     { label: "WhatsApp", href: `https://wa.me/${whatsappNumber}`, handle: whatsappLabel },
   ],
-  /** Hanya wilayah yang benar-benar dijanjikan di price list (free ongkir
-   *  se-Banjarmasin). Daerah lain belum bisa dipastikan, jadi tidak ditulis. */
+  /** Hanya wilayah yang benar-benar dijanjikan: free ongkir wilayah Banjarmasin
+   *  tercetak di price list untuk piringan dan nasi kotak. Untuk paket lain
+   *  brosur tidak mencantumkan catatan ongkir, jadi tidak dijanjikan di sini. */
   serviceAreas: ["Banjarmasin"],
 } as const;
 
@@ -122,38 +132,39 @@ export type Advantage = {
 export const advantages: Advantage[] = [
   {
     icon: Wallet,
-    title: "Harga terbuka di price list",
+    title: "Harga lengkap di price list",
     description:
-      "Harga per pax, per box, per piringan, sampai per termos ada semua di brosur kami. Silakan unduh dan cek sendiri sebelum memesan.",
+      "Per pax, per box, per piringan, sampai per termos, semuanya ada di brosur. Silakan unduh dan cek dulu sebelum memesan.",
   },
   {
     icon: BadgeCheck,
-    title: "Sudah bersertifikat halal",
+    title: "Bersertifikat halal",
     description:
-      "Masakan kami sudah bersertifikat halal, jadi tamu tidak perlu ragu soal bahan maupun cara mengolahnya.",
+      "Masakan kami bersertifikat halal, jadi tamu tidak perlu ragu soal bahannya.",
   },
   {
     icon: Soup,
     title: "Piringan full service",
     description:
-      "Pelayan jaga meja, angkat piring kotor, sampai cuci piring. Semuanya sudah termasuk di paket piringan premium.",
+      "Pelayan jaga meja, ambil piring kotor, sampai cuci piring. Semuanya sudah termasuk di paket piringan premium.",
   },
   {
     icon: Truck,
-    title: "Free ongkir Banjarmasin",
-    description: "Selama acaranya di wilayah Banjarmasin, tidak ada tambahan biaya kirim.",
+    title: "Free ongkir piringan & nasi kotak",
+    description:
+      "Ongkir wilayah Banjarmasin gratis untuk paket piringan dan nasi kotak, sesuai catatan di brosur kami.",
   },
   {
     icon: ClipboardList,
-    title: "Ketentuan jelas sejak awal",
+    title: "Ketentuan jelas dari awal",
     description:
-      "Minimal order, isi tiap paket, dan free ongkir wilayah Banjarmasin tertulis di price list, bukan cuma kesepakatan lisan.",
+      "Minimal order, isi tiap paket, dan catatan ongkirnya tertulis di price list, jadi bisa dibaca dulu sebelum memesan.",
   },
   {
     icon: ListChecks,
     title: "Aqiqah siap bagikan",
     description:
-      "Satu ekor kambing jadi 150 potong, sudah termasuk acar buah, sambal goreng hati, bawang goreng, dan krupuk.",
+      "Satu ekor kambing jadi 150 potong, sudah lengkap dengan acar buah, sambal goreng hati, bawang goreng, dan krupuk.",
   },
 ];
 
@@ -165,52 +176,55 @@ export type OrderFact = { title: string; detail: string };
 export const orderFacts: OrderFact[] = [
   {
     title: "Minimal order 100 pax",
-    detail: "Berlaku untuk paket prasmanan, nasi kotak, cemilan, minuman, dan menu spesial.",
+    detail:
+      "Ada di brosur untuk paket prasmanan, nasi kotak, cemilan, aneka kue, minuman, dan bakso daging sapi.",
   },
   {
     title: "Piringan mulai 250 pax",
-    detail: "Paket minimalis bisa mulai 250 pax, sementara paket premium mulai 500 pax.",
+    detail:
+      "Paket minimalis bisa mulai 250 pax tanpa full service, sedangkan paket premium minimal 500 pax.",
   },
   {
     title: "Free ongkir wilayah Banjarmasin",
-    detail: "Tidak ada biaya kirim tambahan selama lokasi acaranya ada di Banjarmasin.",
+    detail:
+      "Untuk paket piringan dan nasi kotak, ongkir wilayah Banjarmasin gratis, sesuai catatan di brosur.",
   },
   {
-    title: "Bonus pesanan 2.000 pax",
-    detail: "Dapat tambahan 6 meja saji dan 6 gubukan dari kami.",
+    title: "Bonus pesanan piringan 2.000 pax",
+    detail: "Kami tambah 6 meja saji dan 6 gubukan untuk pesanannya.",
   },
   {
-    title: "Prasmanan sudah full service",
-    detail: "Meja saji dijaga pelayan selama acara berlangsung, mulai 100 pax.",
+    title: "Prasmanan full service",
+    detail: "Catatan di brosur: minimal pemesanan 100 pax, dan pelayanannya full service.",
   },
   {
     title: "Es termos dapat gelas & sendok",
-    detail: "Setiap pesanan es termos gratis gelas dan sendok plastik.",
+    detail: "Setiap pesanan es termos dapat free gelas dan sendok plastik.",
   },
   {
     title: "Aqiqah mulai Rp 3.700.000",
     detail:
-      "Satu ekor kambing jadi 150 potong, lengkap dengan acar buah, sambal goreng hati, bawang goreng, dan krupuk.",
+      "Satu ekor kambing jadi 150 potong, lengkap dengan acar buah, sambal goreng hati kambing, bawang goreng, dan krupuk.",
   },
   {
     title: "Semua harga tertulis per satuan",
     detail:
-      "Piringan, pax, box, gelas, termos, atau nampan. Tinggal dikalikan jumlah tamu, tanpa biaya tersembunyi.",
+      "Di brosur harganya per satuan, bukan borongan: per piringan, per pax, per box, per gelas, per termos, per nampan, sampai per ekor. Tinggal dikalikan jumlah yang dipesan.",
   },
 ];
 
 export const visionMission = {
   vision:
-    "Jadi catering rumahan yang paling dipercaya di Banjarmasin dan sekitarnya. Masakan yang rasanya khas rumah, dikerjakan serapi mungkin, dengan harga yang tetap ramah buat keluarga.",
+    "Jadi catering rumahan yang paling dipercaya di Banjarmasin dan sekitarnya. Masakan tetap terasa seperti masakan rumah, dikerjakan rapi, dan harganya masih masuk buat keluarga.",
   mission: [
     "Masak pakai bahan yang dibeli segar dan bumbu alami, sebisa mungkin tanpa pengawet.",
     "Jaga rasa, porsi, dan waktu antar tetap sama di setiap pesanan.",
-    "Balas pertanyaan pelanggan dengan jujur dan secepat yang kami bisa.",
+    "Balas pertanyaan pelanggan dengan jujur, sebisa mungkin cepat.",
     "Ikut melibatkan warga sekitar dapur, terutama saat pesanan sedang menumpuk.",
   ],
   motto: "Masak dengan hati, sajikan dengan ramah.",
   values: [
-    { title: "Jujur", description: "Harga dan porsi sesuai apa yang kami tulis di price list." },
+    { title: "Jujur", description: "Harga dan porsinya sesuai yang kami tulis di price list." },
     { title: "Teliti", description: "Tiap pesanan kami cek ulang sebelum dikirim." },
     { title: "Ramah", description: "Pelanggan kami layani seperti tamu di rumah sendiri." },
   ],
@@ -218,12 +232,11 @@ export const visionMission = {
 
 export const about = {
   eyebrow: "Kenalan Yuk!",
-  title: "Dari dapur rumah, kini melayani acara Anda",
-  description: "Ceritanya sederhana, dan semuanya berawal dari dapur rumah di Banjarmasin.",
+  title: "Ceritanya mulai dari dapur rumah di Banjarmasin",
   paragraphs: [
-    "Nur Marisa Catering berawal dari dapur rumah di Banjarmasin, tepatnya dari hobi masak masakan khas yang hasilnya sering dibagikan ke kerabat.",
-    "Dari acara syukuran kecil-kecilan, masakan kami makin sering dipesan orang karena rasanya pas dan dapurnya dijaga bersih. Sekarang pesanan datang dari acara keluarga sampai acara kantor, mulai paket piringan, prasmanan, nasi kotak, cemilan, sampai aqiqah.",
-    "Harga dan isi tiap paketnya tertulis di brosur price list kami, jadi Anda bisa cek dulu sebelum memesan. Kalau sudah cocok, tinggal kirim tanggal acara, jumlah tamu, dan lokasinya lewat WhatsApp.",
+    "Semuanya mulai dari dapur rumah di Banjarmasin. Awalnya cuma hobi masak masakan khas, hasilnya sering dibagikan ke kerabat.",
+    "Lama-lama pesanan datang dari syukuran kecil-kecilan, karena rasanya pas dan dapurnya dijaga bersih. Sekarang, dari acara keluarga sampai acara kantor, sudah ada paket piringan, prasmanan, nasi kotak, cemilan, sampai aqiqah.",
+    "Semua harga dan isi paketnya ada di brosur price list kami, silakan dicek dulu. Kalau sudah cocok, tinggal kirim tanggal acara, jumlah tamu, dan lokasinya lewat WhatsApp.",
   ],
   highlights: [
     {
@@ -240,8 +253,9 @@ export const about = {
     },
     {
       label: "Free ongkir",
-      value: "Wilayah Banjarmasin",
-      description: "Tidak ada biaya kirim tambahan selama acara Anda ada di Banjarmasin.",
+      value: "Piringan & nasi kotak",
+      description:
+        "Ongkir wilayah Banjarmasin gratis untuk dua paket ini, sesuai catatan di brosur kami.",
     },
   ],
   /** Foto asli dari brosur price list kami, bukan foto stok. */

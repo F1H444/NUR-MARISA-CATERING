@@ -10,8 +10,8 @@ export function WhyUs() {
       <Container>
         <SectionHeading
           eyebrow="Mengapa Pilih Kami?"
-          title="Kenapa harus pesan di kami?"
-          description="Yang ada di daftar ini semuanya tertulis di brosur price list kami, jadi bisa Anda cek sendiri sebelum memesan."
+          title="Kenapa pesan catering ke kami?"
+          description="Semua yang ada di daftar ini tertulis di brosur price list kami, silakan cek sendiri sebelum memesan."
           action={
             <Link
               href={whatsappUrl()}
@@ -19,7 +19,7 @@ export function WhyUs() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm font-semibold text-gold-300 transition-colors duration-200 hover:text-gold-200"
             >
-              Tanya tim kami
+              Tanya langsung
               <ArrowRight size={16} aria-hidden />
             </Link>
           }

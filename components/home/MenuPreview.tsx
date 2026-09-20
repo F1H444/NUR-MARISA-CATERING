@@ -34,7 +34,7 @@ export function MenuPreview() {
       <Container>
         <SectionHeading
           eyebrow="Intip Menu"
-          title="Price list kami, langsung dari brosur resmi"
+          title="Price list catering Banjarmasin, bisa dibaca langsung di sini"
           description="Klik halamannya untuk membacanya lebih besar. Daftar lengkapnya ada di halaman menu."
           action={
             <Button
@@ -103,8 +103,8 @@ export function MenuPreview() {
                   Punya pertanyaan soal paket atau jumlah tamu?
                 </p>
                 <p className="mt-1.5 max-w-xl text-sm leading-relaxed text-forest-200">
-                  Chat saja, kami bantu pilihkan paket yang paling pas dengan jumlah tamu dan
-                  anggaran Anda.
+                  Chat saja, kami bantu pilihkan yang paling pas dengan jumlah tamu dan
+                  anggarannya.
                 </p>
               </div>
             </div>
@@ -115,7 +115,7 @@ export function MenuPreview() {
               size="lg"
               className="shrink-0"
             >
-              Konsultasi Gratis
+              Tanya dulu, gratis
             </Button>
           </div>
         </Reveal>

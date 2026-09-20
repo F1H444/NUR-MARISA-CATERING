@@ -13,7 +13,12 @@ import { navLinks, serviceAreaLabel, site, whatsappUrl } from "@/data/site";
 const menuLinks = [
   { label: "Price list lengkap", href: "/menu#price-list" },
   { label: "Cara pesan", href: "/menu#cara-pesan" },
+  { label: "Tanya jawab", href: "/#faq" },
 ];
+
+/** Sama dengan navigasi utama, ditambah tautan ke section tanya jawab yang
+ *  tidak muat kalau dimasukkan ke navbar. */
+const footerLinks = [...navLinks, { label: "Tanya jawab", href: "/#faq" }];
 
 const socials = [
   { label: "Instagram", href: site.socials[0].href, icon: InstagramIcon },
@@ -66,7 +71,7 @@ export function Footer() {
               Jelajahi
             </p>
             <ul className="mt-4 space-y-2.5 text-sm">
-              {navLinks.map((link) => (
+              {footerLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}

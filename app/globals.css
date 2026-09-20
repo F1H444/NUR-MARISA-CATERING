@@ -83,20 +83,4 @@
   }
 }
 
-@layer utilities {
-  /* Scrollbar tipis agar tampilan tetap bersih */
-  .no-scrollbar {
-    scrollbar-width: none;
-  }
-
-  .no-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
-
-  /* Garis rambut emas untuk memisahkan section */
-  .hairline {
-    background-color: color-mix(in srgb, var(--color-gold-400) 30%, transparent);
-  }
-}
-
 

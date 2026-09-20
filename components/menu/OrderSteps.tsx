@@ -8,24 +8,24 @@ const steps = [
     icon: ClipboardList,
     title: "Pilih menu & jumlah",
     description:
-      "Tentukan paket dari price list, jumlah pax atau box, tanggal, dan lokasi acaranya.",
+      "Tentukan paket dari price list, jumlah pax atau boxnya, tanggal, dan lokasi acaranya.",
   },
   {
     icon: MessageCircle,
     title: "Konfirmasi via WhatsApp",
-    description: `Chat ${site.phoneLabel}, lalu kami kabari rincian harganya dan apakah tanggal acara Anda masih kosong.`,
+    description: `Chat ${site.phoneLabel}. Kirim tanggal acara, jumlah tamu, dan lokasinya, nanti kami kabari rincian harganya dan tanggalnya masih kosong atau tidak.`,
   },
   {
     icon: Wallet,
-    title: "Uang muka & jadwal",
+    title: "Uang muka & pembayaran",
     description:
-      "Uang muka mengunci jadwal dapur. Nominal dan cara bayarnya kami bicarakan di chat ini, menyesuaikan pesanan Anda.",
+      "Soal uang muka, cara bayar, dan pelunasan, kami bicarakan langsung di chat ini, menyesuaikan jumlah tamu dan tanggal acaranya.",
   },
   {
     icon: Truck,
-    title: "Antar & tata meja",
+    title: "Antar ke lokasi acara",
     description:
-      "Kami antar sebelum acara mulai. Untuk acara di Banjarmasin tidak ada biaya kirim, dan meja prasmanan kami tata di lokasi.",
+      "Pesanan kami antar sebelum acara mulai. Untuk paket piringan dan nasi kotak, ongkir wilayah Banjarmasin gratis, sesuai catatan di brosur.",
   },
 ];
 
@@ -36,8 +36,8 @@ export function OrderSteps() {
         <SectionHeading
           align="center"
           eyebrow="Cara Pesan"
-          title="Dari chat pertama sampai hidangan tersaji"
-          description="Alurnya cuma empat langkah, dan semua kesepakatan kami konfirmasi tertulis supaya tidak ada salah paham."
+          title="Dari chat pertama sampai makanan tersaji"
+          description="Alurnya cuma empat langkah, dan rincian pesanannya kami konfirmasi lewat chat supaya tidak ada salah paham."
         />
 
         <ol className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">

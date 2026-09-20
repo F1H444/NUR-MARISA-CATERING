@@ -18,11 +18,11 @@ export function Gallery() {
         <SectionHeading
           eyebrow="Galeri"
           title="Hidangan kami, apa adanya"
-          description="Semua foto di halaman ini diambil dari brosur resmi kami. Tidak ada foto sewaan, dan hidangannya memang seperti itu."
+          description="Semua foto di sini diambil dari brosur kami sendiri. Bukan foto sewaan, hidangannya memang seperti itu."
           action={
             <span className="inline-flex shrink-0 items-center gap-2 rounded-full border border-gold-400/30 bg-forest-900 px-4 py-2 text-xs font-semibold text-gold-300">
               <Camera size={15} aria-hidden />
-              Foto dari brosur resmi
+              Foto dari brosur kami
             </span>
           }
         />

@@ -39,7 +39,7 @@ export function MenuHero() {
             <Reveal delay={120}>
               <h1 className="mt-6 text-[2.25rem] leading-[1.08] font-semibold text-cream-50 sm:text-4xl lg:text-[3.5rem]">
                 Price list lengkap kami,
-                <span className="text-gold-300"> langsung dari brosur resmi.</span>
+                <span className="text-gold-300"> langsung dari brosur.</span>
               </h1>
             </Reveal>
 
@@ -91,7 +91,7 @@ export function MenuHero() {
                   </span>
                   <p className="text-xs leading-relaxed text-forest-200">
                     {priceListPages.length} halaman brosur · PDF siap unduh ({priceListFile.sizeLabel})
-                    · harga sesuai daftar resmi kami
+                    · harganya sama seperti di brosur kami
                   </p>
                 </div>
               </dl>

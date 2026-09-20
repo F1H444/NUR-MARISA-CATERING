@@ -20,8 +20,8 @@ export function ContactLocation() {
       <Container>
         <SectionHeading
           eyebrow="Kontak & Lokasi"
-          title="Mampir ke dapur kami, atau chat saja lebih dulu"
-          description="Kalau mau lihat sendiri tempat kami memasak, alamat lengkapnya ada di bawah. Untuk pesanan dan pertanyaan, WhatsApp paling cepat."
+          title="Mampir ke dapur kami di Banjarmasin, atau chat saja lebih dulu"
+          description="Kalau mau lihat sendiri tempat kami masak, alamat lengkapnya ada di bawah. Untuk pesanan, WhatsApp yang paling cepat dibalas."
         />
 
         <div className="mt-12 grid gap-4 lg:grid-cols-12 lg:gap-5">
@@ -131,7 +131,7 @@ export function ContactLocation() {
                   </span>
                   <div>
                     <p className="text-sm font-semibold text-cream-50">
-                      Dapur produksi &amp; kantor pemesanan
+                      Dapur &amp; kantor pemesanan kami
                     </p>
                     <p className="mt-0.5 text-xs leading-relaxed text-ash">
                       {site.addressShort} · Melayani {serviceAreaLabel}

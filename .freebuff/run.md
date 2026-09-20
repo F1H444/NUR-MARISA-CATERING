@@ -64,6 +64,9 @@ Use `npm.cmd` (not `npm`), because `Start-Process` does not resolve shell shims.
 must go to separate files. The server listens on `http://localhost:3000`; the PID that owns
 the listener is the `node.exe` one (the `cmd.exe` wrapper PID differs).
 
-Routes: `/` (home) and `/menu` (brochure price list only; the menu card catalog was removed).
-The map is a Google Maps `output=embed` iframe (no API key, no extra dependency); the pin is the
-exact coordinate in `data/site.ts` (`mapPin`), not a text address query.
+Routes: `/` (home), `/menu` (brochure price list only; the menu card catalog was removed), and
+`/isi-data` (owner data form, dev-only; it 404s in production).
+The map is a Google Maps `output=embed` iframe (no API key, no extra dependency); it embeds a
+**business-name search** (`googleMapsQuery` in `data/site.ts`), not a coordinate, so Google shows
+the official business card and its own pin. The directions button targets the same name.
+No Google Maps rating is displayed anywhere (owner decision; only 3 reviews there).
