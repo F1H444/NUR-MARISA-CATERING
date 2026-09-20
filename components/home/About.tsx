@@ -11,7 +11,7 @@ export function About() {
     <Section id="kenalan" className="bg-forest-900">
       <Container>
         <div className="grid gap-4 lg:grid-cols-12 lg:gap-5">
-          {/* Foto dapur & acara */}
+          {/* Foto dari brosur resmi, bukan foto stok. */}
           <Reveal variant="left" className="lg:col-span-7">
             <div className="relative h-full min-h-[22rem] overflow-hidden rounded-4xl border border-forest-800 bg-forest-900 sm:min-h-[26rem]">
               <Image

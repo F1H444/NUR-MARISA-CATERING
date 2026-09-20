@@ -10,6 +10,10 @@
  * pasangan id -> nama berkas di PHOTO_BY_ITEM lalu jalankan ulang:
  *   node scripts/extract-price-list-images.mjs
  *   node scripts/build-menu-images.mjs
+ *
+ * Sebagian foto yang tercetak di brosur bukan gambar utuh, melainkan potongan
+ * dari gambar aslinya. Potongan itu didaftarkan di CROP_BY_ITEM supaya gambar
+ * yang dipakai website sama persis dengan yang dilihat pembaca brosur.
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -78,6 +82,15 @@ const PHOTO_BY_ITEM = {
   "aq-kambing": "p02-07-X7.jpg",
 };
 
+/** id menu -> potongan gambar asli (dalam persen dari gambar aslinya).
+ *  Halaman Piringan (1) menampilkan foto yang sama dengan foto pelayanan p01-02-X9,
+ *  tapi hanya bagian hidangannya saja: sosok pelayan yang ada di gambar asli
+ *  dipotong. Daftar di sini disusun dengan mencocokkan potongan foto brosur ke
+ *  gambar aslinya, jadi hasilnya bukan perkiraan. */
+const CROP_BY_ITEM = {
+  "pi-minimalis": { left: 0.244, top: 0.321, width: 0.543, height: 0.646 },
+};
+
 fs.mkdirSync(targetDir, { recursive: true });
 
 let written = 0;
@@ -91,8 +104,18 @@ for (const [id, file] of Object.entries(PHOTO_BY_ITEM)) {
   }
 
   const target = path.join(targetDir, `${id}.jpg`);
-  await sharp(source)
-    .rotate()
+  const pipeline = sharp(source).rotate();
+  const crop = CROP_BY_ITEM[id];
+  if (crop) {
+    const meta = await sharp(source).metadata();
+    pipeline.extract({
+      left: Math.round(meta.width * crop.left),
+      top: Math.round(meta.height * crop.top),
+      width: Math.round(meta.width * crop.width),
+      height: Math.round(meta.height * crop.height),
+    });
+  }
+  await pipeline
     .resize({ width: MAX_WIDTH, withoutEnlargement: true })
     .flatten({ background: "#fdfbf6" })
     .jpeg({ quality: QUALITY, mozjpeg: true })

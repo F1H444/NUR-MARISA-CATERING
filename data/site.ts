@@ -258,9 +258,11 @@ export const about = {
         "Ongkir wilayah Banjarmasin gratis untuk dua paket ini, sesuai catatan di brosur kami.",
     },
   ],
-  /** Foto asli dari brosur price list kami, bukan foto stok. */
+  /** Foto asli dari brosur price list kami (tercetak di halaman brosur),
+   *  bukan foto stok. Foto pelayan yang sebelumnya di sini dihapus karena
+   *  tidak dikenali pemilik sebagai bagian dari brosur. */
   image: {
-    src: "/images/menu/pi-minimalis.jpg",
-    alt: "Pelayanan pesanan Nur Marisa Catering di lokasi acara",
+    src: "/images/menu/pr-premium.jpg",
+    alt: "Aneka lauk paket prasmanan premium Nur Marisa Catering di atas meja saji",
   },
 };

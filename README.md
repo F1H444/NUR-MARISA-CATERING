@@ -161,6 +161,10 @@ node scripts/build-menu-images.mjs
    memastikan foto cocok dengan menunya (mis. Matcha hijau, Thai tea oranye, Mie Habang merah).
 2. `build-menu-images.mjs` memetakan gambar ke item menu lewat tabel `PHOTO_BY_ITEM`, lalu
    mengecilkannya ke lebar 1100 px (JPEG q76). Skrip ini menghasilkan foto untuk seluruh item menu.
+   Foto yang di brosur tampil sebagai potongan (bukan gambar utuh) didaftarkan di `CROP_BY_ITEM`,
+   jadi yang tersimpan adalah bagian yang benar-benar terlihat di brosur. Saat ini satu foto:
+   `pi-minimalis` — gambar aslinya memuat sosok pelayan, sedangkan di halaman Piringan brosur
+   hanya hidangannya yang tercetak.
 
 **Saat ini hanya 12 dari 33 foto yang disimpan** di `public/images/menu/` (sekitar 1,1 MB),
 `yaitu foto yang benar-benar tampil di website: dua di hero, satu di section Kenalan, dan delapan
