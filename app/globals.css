@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------
+   Design tokens: Nur Marisa Catering
+   Tema hijau tua (senada brosur price list): latar forest-950/900,
+   teks krem, aksen emas. Permukaan terang dipakai sesedikit mungkin.
+   Tidak ada gradient sama sekali, semua warna solid.
+------------------------------------------------------------------ */
+@theme {
+  --color-forest-950: #082016;
+  --color-forest-900: #0d3524;
+  --color-forest-800: #124730;
+  --color-forest-700: #17593d;
+  --color-forest-600: #1d6f4b;
+  --color-forest-500: #268a5c;
+  --color-forest-400: #4aa87c;
+  --color-forest-300: #8fd0ae;
+  --color-forest-200: #c4e7d3;
+  --color-forest-100: #e2f2e8;
+  --color-forest-50: #f2f8f4;
+
+  --color-cream-50: #fdfbf6;
+  --color-cream-100: #faf5ea;
+  --color-cream-200: #f2ead9;
+
+  /* Emas: aksen yang diambil dari brosur price list */
+  --color-gold-100: #f9f0d8;
+  --color-gold-200: #f0dfb0;
+  --color-gold-300: #e3c884;
+  --color-gold-400: #d4ae57;
+  --color-gold-500: #b78f3a;
+  --color-gold-600: #8f6c27;
+
+  /* Teks di atas permukaan emas/terang */
+  --color-ink: #0a1a12;
+  /* Teks pendukung di atas hijau tua */
+  --color-ash: #9fb4a9;
+
+  --font-sans: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-heading), ui-sans-serif, system-ui, sans-serif;
+
+  --radius-4xl: 2rem;
+
+  --shadow-soft: 0 1px 2px rgba(3, 12, 8, 0.35), 0 14px 34px -20px rgba(3, 12, 8, 0.75);
+  --shadow-lift: 0 2px 6px rgba(3, 12, 8, 0.4), 0 30px 56px -30px rgba(3, 12, 8, 0.9);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* offset untuk navbar yang mengapung */
+    scroll-padding-top: 7rem;
+  }
+
+  /* Elemen `Reveal` bergeser 40px ke samping selama menunggu trigger,
+     sedangkan gutter mobile hanya 20px; sisa 20px membuat halaman bisa
+     digeser horizontal. `clip` (bukan `hidden`) menahan kelebihan itu
+     tanpa membentuk scroll container, sehingga `position: sticky` pada
+     navbar dan filter kategori tetap menempel ke viewport. */
+  html,
+  body {
+    overflow-x: clip;
+  }
+
+  body {
+    background-color: var(--color-forest-950);
+    color: var(--color-cream-100);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+
+  ::selection {
+    background-color: var(--color-gold-400);
+    color: var(--color-forest-950);
+  }
+}
+
+@layer utilities {
+  /* Scrollbar tipis agar tampilan tetap bersih */
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Garis rambut emas untuk memisahkan section */
+  .hairline {
+    background-color: color-mix(in srgb, var(--color-gold-400) 30%, transparent);
+  }
+}
+
+

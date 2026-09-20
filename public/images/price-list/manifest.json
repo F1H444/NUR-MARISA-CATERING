@@ -1,0 +1,84 @@
+{
+  "source": "Price list Nurmarisa Catering.pdf",
+  "targetWidth": 1300,
+  "quality": 78,
+  "pages": [
+    {
+      "page": 1,
+      "src": "/images/price-list/page-01.jpg",
+      "width": 1300,
+      "height": 1839,
+      "bytes": 378458
+    },
+    {
+      "page": 2,
+      "src": "/images/price-list/page-02.jpg",
+      "width": 1300,
+      "height": 1839,
+      "bytes": 335371
+    },
+    {
+      "page": 3,
+      "src": "/images/price-list/page-03.jpg",
+      "width": 1300,
+      "height": 1839,
+      "bytes": 321301
+    },
+    {
+      "page": 4,
+      "src": "/images/price-list/page-04.jpg",
+      "width": 1300,
+      "height": 1839,
+      "bytes": 312859
+    },
+    {
+      "page": 5,
+      "src": "/images/price-list/page-05.jpg",
+      "width": 1300,
+      "height": 1839,
+      "bytes": 349302
+    },
+    {
+      "page": 6,
+      "src": "/images/price-list/page-06.jpg",
+      "width": 1300,
+      "height": 1839,
+      "bytes": 360589
+    },
+    {
+      "page": 7,
+      "src": "/images/price-list/page-07.jpg",
+      "width": 1300,
+      "height": 1839,
+      "bytes": 238972
+    },
+    {
+      "page": 8,
+      "src": "/images/price-list/page-08.jpg",
+      "width": 1300,
+      "height": 1839,
+      "bytes": 281577
+    },
+    {
+      "page": 9,
+      "src": "/images/price-list/page-09.jpg",
+      "width": 1300,
+      "height": 1839,
+      "bytes": 323453
+    },
+    {
+      "page": 10,
+      "src": "/images/price-list/page-10.jpg",
+      "width": 1300,
+      "height": 1839,
+      "bytes": 287678
+    },
+    {
+      "page": 11,
+      "src": "/images/price-list/page-11.jpg",
+      "width": 1300,
+      "height": 1839,
+      "bytes": 285309
+    }
+  ]
+}
