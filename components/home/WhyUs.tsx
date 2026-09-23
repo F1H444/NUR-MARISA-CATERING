@@ -40,7 +40,7 @@ export function WhyUs() {
               >
                 <div className="group flex h-full flex-col rounded-4xl border border-forest-800 bg-forest-950 p-7 transition-all duration-300 hover:-translate-y-1 hover:border-gold-400/40 hover:shadow-lift">
                   <div className="flex items-center justify-between gap-4">
-                    <span className="grid h-12 w-12 place-items-center rounded-2xl border border-forest-700 bg-forest-800 text-gold-300 transition-colors duration-300 group-hover:border-gold-400/50 group-hover:bg-gold-400 group-hover:text-forest-950">
+                    <span className="grid h-12 w-12 place-items-center rounded-2xl border border-forest-700 bg-forest-800 text-gold-300 transition-colors duration-300 group-hover:border-gold-400/50 group-hover:bg-gold-400 group-hover:text-pine-900">
                       <Icon size={21} aria-hidden />
                     </span>
                     <span

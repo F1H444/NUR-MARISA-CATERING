@@ -5,11 +5,11 @@ type ButtonVariant = "primary" | "secondary" | "outline" | "light" | "dark";
 type ButtonSize = "sm" | "md" | "lg";
 
 const variants: Record<ButtonVariant, string> = {
-  primary: "bg-gold-400 text-forest-950 hover:bg-gold-300 border border-gold-500",
+  primary: "bg-gold-400 text-pine-900 hover:bg-gold-300 border border-gold-500",
   secondary: "bg-forest-800 text-cream-50 hover:bg-forest-700 border border-forest-700",
   outline:
     "bg-transparent text-cream-100 hover:border-gold-400/70 hover:text-gold-200 border border-forest-700",
-  light: "bg-cream-50 text-forest-950 hover:bg-cream-100 border border-cream-100",
+  light: "bg-cream-50 text-pine-900 hover:bg-cream-100 border border-cream-100",
   dark: "bg-forest-950 text-cream-100 hover:bg-forest-900 border border-forest-800",
 };
 
@@ -54,7 +54,7 @@ export function Button({
 }: ButtonProps) {
   const classes = [
     "inline-flex items-center justify-center rounded-full font-medium tracking-tight",
-    "transition-colors duration-200 outline-none focus-visible:ring-2 focus-visible:ring-gold-300 focus-visible:ring-offset-2 focus-visible:ring-offset-forest-950",
+    "transition-colors duration-200 outline-none focus-visible:ring-2 focus-visible:ring-gold-300 focus-visible:ring-offset-2 focus-visible:ring-offset-pine-900",
     variants[variant],
     sizes[size],
     className,

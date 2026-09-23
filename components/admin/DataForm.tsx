@@ -125,10 +125,10 @@ function readStored(): FormData | null {
 }
 
 const inputClass =
-  "w-full rounded-2xl border border-forest-700 bg-forest-950 px-4 py-3 text-sm text-cream-50 outline-none transition-colors placeholder:text-forest-300 focus:border-gold-400/70 focus:ring-2 focus:ring-gold-400/25";
+  "w-full rounded-2xl border border-forest-700 bg-forest-950 px-4 py-3 text-sm text-cream-50 outline-none transition-colors placeholder:text-forest-200 focus:border-gold-400/70 focus:ring-2 focus:ring-gold-400/25";
 
-const labelClass = "text-xs font-semibold tracking-[0.14em] text-gold-400 uppercase";
-const hintClass = "mt-1 block text-xs leading-relaxed text-forest-300";
+const labelClass = "text-xs font-semibold tracking-[0.14em] text-gold-300 uppercase";
+const hintClass = "mt-1 block text-xs leading-relaxed text-forest-200";
 
 function Field({
   label,
@@ -310,7 +310,7 @@ export function DataForm() {
           <button
             type="button"
             onClick={saveToProject}
-            className="inline-flex items-center gap-2 rounded-full border border-gold-500 bg-gold-400 px-5 py-3 text-sm font-semibold text-forest-950 transition-colors hover:bg-gold-300"
+            className="inline-flex items-center gap-2 rounded-full border border-gold-500 bg-gold-400 px-5 py-3 text-sm font-semibold text-pine-900 transition-colors hover:bg-gold-300"
           >
             <Save size={16} aria-hidden />
             Simpan
@@ -800,7 +800,7 @@ export function DataForm() {
         <button
           type="button"
           onClick={saveToProject}
-          className="inline-flex shrink-0 items-center gap-2 rounded-full border border-gold-500 bg-gold-400 px-6 py-3.5 text-sm font-semibold text-forest-950 transition-colors hover:bg-gold-300"
+          className="inline-flex shrink-0 items-center gap-2 rounded-full border border-gold-500 bg-gold-400 px-6 py-3.5 text-sm font-semibold text-pine-900 transition-colors hover:bg-gold-300"
         >
           <Save size={16} aria-hidden />
           Simpan isian

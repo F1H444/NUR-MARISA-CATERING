@@ -32,16 +32,16 @@ export function CtaBanner({
       <Container className="relative">
         <Reveal>
           <div className="mx-auto max-w-3xl text-center">
-            <span className="inline-flex items-center gap-2 rounded-full border border-forest-950/15 bg-forest-950/10 px-3.5 py-1.5 text-[11px] font-semibold tracking-[0.18em] text-forest-950 uppercase">
-              <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-forest-950" />
+            <span className="inline-flex items-center gap-2 rounded-full border border-pine-900/15 bg-pine-900/10 px-3.5 py-1.5 text-[11px] font-semibold tracking-[0.18em] text-pine-900 uppercase">
+              <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-pine-900" />
               Pesan Sekarang
             </span>
 
-            <h2 className="mt-6 text-[2rem] leading-[1.12] font-semibold text-forest-950 sm:text-4xl lg:text-[2.75rem]">
+            <h2 className="mt-6 text-[2rem] leading-[1.12] font-semibold text-pine-900 sm:text-4xl lg:text-[2.75rem]">
               {title}
             </h2>
 
-            <p className="mt-4 text-base leading-relaxed text-forest-900/80">{description}</p>
+            <p className="mt-4 text-base leading-relaxed text-pine-800/80">{description}</p>
 
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Button
@@ -56,7 +56,7 @@ export function CtaBanner({
                 href={site.phoneHref}
                 variant="outline"
                 size="lg"
-                className="border-forest-950/30 text-forest-950 hover:border-forest-950 hover:bg-gold-300 hover:text-forest-950"
+                className="border-pine-900/30 text-pine-900 hover:border-pine-900 hover:bg-gold-300 hover:text-pine-900"
                 icon={<Phone size={18} aria-hidden />}
               >
                 {site.phoneLabel}
@@ -66,7 +66,7 @@ export function CtaBanner({
                   href="/menu"
                   variant="outline"
                   size="lg"
-                  className="border-forest-950/30 text-forest-950 hover:border-forest-950 hover:bg-gold-300 hover:text-forest-950"
+                  className="border-pine-900/30 text-pine-900 hover:border-pine-900 hover:bg-gold-300 hover:text-pine-900"
                   icon={<ArrowRight size={18} aria-hidden />}
                   iconPosition="right"
                 >
@@ -75,7 +75,7 @@ export function CtaBanner({
               ) : null}
             </div>
 
-            <p className="mt-6 text-xs text-forest-900/70">
+            <p className="mt-6 text-xs text-pine-800/70">
               Dapur kami di {site.addressShort} · {site.orderNote}
             </p>
           </div>

@@ -57,12 +57,12 @@ export function SectionHeading({
     <span
       className={[
         "inline-flex items-center gap-2 rounded-full border px-3.5 py-1.5 text-[11px] font-semibold tracking-[0.18em] uppercase",
-        isLight ? "border-gold-400/30 bg-forest-900 text-gold-300" : "border-forest-900/20 bg-forest-950/10 text-forest-900",
+        isLight ? "border-gold-400/30 bg-forest-900 text-gold-300" : "border-pine-900/20 bg-pine-900/10 text-pine-900",
       ].join(" ")}
     >
       <span
         aria-hidden
-        className={`h-1.5 w-1.5 rounded-full ${isLight ? "bg-gold-400" : "bg-forest-900"}`}
+        className={`h-1.5 w-1.5 rounded-full ${isLight ? "bg-gold-400" : "bg-pine-900"}`}
       />
       {eyebrow}
     </span>
@@ -74,7 +74,7 @@ export function SectionHeading({
         size === "compact"
           ? "text-[1.75rem] leading-[1.15] font-semibold sm:text-[2rem] lg:text-[2.25rem]"
           : "text-[2rem] leading-[1.1] font-semibold sm:text-4xl lg:text-[2.9rem]",
-        isLight ? "text-cream-50" : "text-forest-950",
+        isLight ? "text-cream-50" : "text-pine-900",
       ].join(" ")}
     >
       {title}
@@ -85,7 +85,7 @@ export function SectionHeading({
     <p
       className={[
         "text-base leading-relaxed sm:text-[1.0625rem]",
-        isLight ? "text-forest-200" : "text-forest-900/80",
+        isLight ? "text-forest-200" : "text-pine-800/80",
       ].join(" ")}
     >
       {description}

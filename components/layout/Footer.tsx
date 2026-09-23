@@ -67,7 +67,7 @@ export function Footer() {
 
           {/* Navigasi */}
           <nav className="lg:col-span-2" aria-label="Navigasi footer">
-            <p className="text-xs font-semibold tracking-[0.18em] text-gold-400 uppercase">
+            <p className="text-xs font-semibold tracking-[0.18em] text-gold-300 uppercase">
               Jelajahi
             </p>
             <ul className="mt-4 space-y-2.5 text-sm">
@@ -86,7 +86,7 @@ export function Footer() {
 
           {/* Menu & harga */}
           <div className="lg:col-span-2">
-            <p className="text-xs font-semibold tracking-[0.18em] text-gold-400 uppercase">
+            <p className="text-xs font-semibold tracking-[0.18em] text-gold-300 uppercase">
               Menu &amp; Harga
             </p>
             <ul className="mt-4 space-y-2.5 text-sm">
@@ -114,7 +114,7 @@ export function Footer() {
 
           {/* Kontak */}
           <div className="lg:col-span-3">
-            <p className="text-xs font-semibold tracking-[0.18em] text-gold-400 uppercase">
+            <p className="text-xs font-semibold tracking-[0.18em] text-gold-300 uppercase">
               Hubungi
             </p>
             <ul className="mt-4 space-y-3.5 text-sm">

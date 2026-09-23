@@ -50,7 +50,7 @@ export function BrochureLightbox({ pages, openIndex, onClose, onStep }: Brochure
       role="dialog"
       aria-modal="true"
       aria-label={`Halaman ${activePage.page}: ${activePage.label}`}
-      className="fixed inset-0 z-[60] flex flex-col bg-forest-950/90 p-3 backdrop-blur-sm sm:p-5"
+      className="fixed inset-0 z-[60] flex flex-col bg-pine-900/90 p-3 backdrop-blur-sm sm:p-5"
     >
       <button
         type="button"
@@ -72,7 +72,7 @@ export function BrochureLightbox({ pages, openIndex, onClose, onStep }: Brochure
           onClick={onClose}
           autoFocus
           aria-label="Tutup pembesaran"
-          className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-gold-400 text-forest-950 transition-colors duration-200 hover:bg-gold-300"
+          className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-gold-400 text-pine-900 transition-colors duration-200 hover:bg-gold-300"
         >
           <X size={17} aria-hidden />
         </button>

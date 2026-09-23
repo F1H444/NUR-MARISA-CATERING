@@ -112,7 +112,7 @@ export function Hero() {
                   />
                 </div>
 
-                <div className="col-span-2 row-span-2 flex min-w-0 flex-col justify-between rounded-4xl border border-gold-500 bg-gold-400 p-3 text-forest-950 sm:p-5">
+                <div className="col-span-2 row-span-2 flex min-w-0 flex-col justify-between rounded-4xl border border-gold-500 bg-gold-400 p-3 text-pine-900 sm:p-5">
                   <div className="flex items-center gap-1.5">
                     <Wallet size={13} aria-hidden />
                     <span className="text-[10px] font-semibold tracking-[0.14em] uppercase">
@@ -123,7 +123,7 @@ export function Hero() {
                     <p className="font-display text-lg leading-none font-semibold sm:text-2xl">
                       {formatRupiah(lowestPiringanPrice)}
                     </p>
-                    <p className="mt-1.5 text-[0.6875rem] leading-snug text-forest-900/80 sm:text-xs">
+                    <p className="mt-1.5 text-[0.6875rem] leading-snug text-pine-800/80 sm:text-xs">
                       per piringan
                       <span className="mt-0.5 block">dari brosur kami</span>
                     </p>

@@ -29,7 +29,7 @@ export function ContactLocation() {
           <div className="flex min-w-0 flex-col gap-4 lg:col-span-5">
             <Reveal variant="left">
               <div className="rounded-4xl border border-forest-800 bg-forest-950 p-7">
-                <p className="text-xs font-semibold tracking-[0.18em] text-gold-400 uppercase">
+                <p className="text-xs font-semibold tracking-[0.18em] text-gold-300 uppercase">
                   Hubungi kami
                 </p>
 
@@ -89,7 +89,7 @@ export function ContactLocation() {
 
             <Reveal variant="left" delay={90}>
               <div className="rounded-4xl border border-forest-800 bg-forest-950 p-7">
-                <p className="text-xs font-semibold tracking-[0.18em] text-gold-400 uppercase">
+                <p className="text-xs font-semibold tracking-[0.18em] text-gold-300 uppercase">
                   Alamat &amp; jam operasional
                 </p>
 

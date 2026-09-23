@@ -43,7 +43,7 @@ export function Gallery() {
                   sizes="(max-width: 768px) 50vw, 25vw"
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
                 />
-                <figcaption className="absolute bottom-3 left-3 rounded-full border border-gold-400/25 bg-forest-950/90 px-3 py-1.5 text-[11px] font-medium text-cream-50 backdrop-blur-sm">
+                <figcaption className="absolute bottom-3 left-3 rounded-full border border-gold-400/25 bg-pine-900/85 px-3 py-1.5 text-[11px] font-medium text-cream-50 backdrop-blur-sm">
                   {item.caption}
                 </figcaption>
               </figure>

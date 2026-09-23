@@ -114,7 +114,7 @@ export function Navbar() {
                 className={[
                   "rounded-full px-3.5 py-2 text-sm font-medium transition-colors duration-200",
                   active
-                    ? "bg-gold-400 text-forest-950"
+                    ? "bg-gold-400 text-pine-900"
                     : "text-forest-200 hover:bg-forest-800 hover:text-cream-50",
                 ].join(" ")}
               >
@@ -130,9 +130,9 @@ export function Navbar() {
             href={whatsappUrl()}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden items-center gap-2 rounded-full border border-gold-500 bg-gold-400 py-1.5 pr-4 pl-1.5 text-sm font-semibold text-forest-950 transition-colors duration-200 hover:bg-gold-300 sm:inline-flex"
+            className="hidden items-center gap-2 rounded-full border border-gold-500 bg-gold-400 py-1.5 pr-4 pl-1.5 text-sm font-semibold text-pine-900 transition-colors duration-200 hover:bg-gold-300 sm:inline-flex"
           >
-            <span className="grid h-7 w-7 place-items-center rounded-full bg-forest-950 text-gold-300">
+            <span className="grid h-7 w-7 place-items-center rounded-full bg-pine-900 text-gold-300">
               <MessageCircle size={14} aria-hidden />
             </span>
             Pesan Sekarang
@@ -144,7 +144,7 @@ export function Navbar() {
             onClick={toggleMenu}
             aria-expanded={isMenuOpen}
             aria-label={isMenuOpen ? "Tutup menu" : "Buka menu"}
-            className="grid h-10 w-10 place-items-center rounded-full bg-cream-50 text-forest-950 transition-colors duration-200 hover:bg-cream-100 lg:hidden"
+            className="grid h-10 w-10 place-items-center rounded-full bg-cream-50 text-pine-900 transition-colors duration-200 hover:bg-cream-100 lg:hidden"
           >
             {isMenuOpen ? <X size={18} aria-hidden /> : <MenuIcon size={18} aria-hidden />}
           </button>
@@ -170,7 +170,7 @@ export function Navbar() {
                 className={[
                   "rounded-2xl px-4 py-3 text-sm font-medium transition-colors duration-200",
                   active
-                    ? "bg-gold-400 text-forest-950"
+                    ? "bg-gold-400 text-pine-900"
                     : "text-forest-200 hover:bg-forest-800 hover:text-cream-50",
                 ].join(" ")}
               >
@@ -183,7 +183,7 @@ export function Navbar() {
             href={whatsappUrl()}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-2 inline-flex items-center justify-center gap-2 rounded-2xl bg-gold-400 px-4 py-3 text-sm font-semibold text-forest-950"
+            className="mt-2 inline-flex items-center justify-center gap-2 rounded-2xl bg-gold-400 px-4 py-3 text-sm font-semibold text-pine-900"
           >
             <MessageCircle size={16} aria-hidden />
             Pesan Sekarang

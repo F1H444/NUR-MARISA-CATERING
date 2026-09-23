@@ -3,7 +3,7 @@ import { site } from "@/data/site";
 
 /** Gambar pratinjau yang muncul saat alamat website dibagikan di WhatsApp,
  *  Instagram, atau media sosial lain. Warnanya sengaja sama dengan situs:
- *  hijau tua, krem, dan aksen emas, tanpa gradient. */
+ *  hijau cerah, krem, dan aksen emas, tanpa gradient. */
 export const alt = `${site.name}: catering piringan, prasmanan, dan nasi kotak di ${site.city}`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
@@ -26,7 +26,7 @@ export default function OpengraphImage() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          backgroundColor: "#082016",
+          backgroundColor: "#085e42",
           padding: 72,
           position: "relative",
         }}
@@ -40,7 +40,7 @@ export default function OpengraphImage() {
             width: 420,
             height: 420,
             borderRadius: 9999,
-            backgroundColor: "#0d3524",
+            backgroundColor: "#0d6b4a",
             display: "flex",
           }}
         />
@@ -51,8 +51,8 @@ export default function OpengraphImage() {
             left: -140,
             width: 420,
             height: 420,
+            backgroundColor: "#0d6b4a",
             borderRadius: 9999,
-            backgroundColor: "#0d3524",
             display: "flex",
           }}
         />
@@ -90,7 +90,7 @@ export default function OpengraphImage() {
               marginTop: 22,
               fontSize: 38,
               lineHeight: 1.25,
-              color: "#c4e7d3",
+              color: "#c9ecdb",
               maxWidth: 880,
             }}
           >
@@ -108,8 +108,8 @@ export default function OpengraphImage() {
                   marginRight: 14,
                   padding: "12px 26px",
                   borderRadius: 9999,
-                  border: "2px solid #124730",
-                  backgroundColor: "#0d3524",
+                  border: "2px solid #117850",
+                  backgroundColor: "#0d6b4a",
                   color: "#fdfbf6",
                   fontSize: 24,
                 }}

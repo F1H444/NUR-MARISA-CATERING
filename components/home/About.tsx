@@ -62,7 +62,7 @@ export function About() {
                     <Icon size={20} aria-hidden />
                   </span>
                   <div>
-                    <p className="text-xs font-semibold tracking-[0.16em] text-gold-400 uppercase">
+                    <p className="text-xs font-semibold tracking-[0.16em] text-gold-300 uppercase">
                       {highlight.label}
                     </p>
                     <p className="mt-2 font-display text-lg leading-snug font-semibold text-cream-50">

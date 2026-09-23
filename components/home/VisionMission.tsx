@@ -23,7 +23,7 @@ export function VisionMission() {
                   <Target size={20} aria-hidden />
                 </span>
               <div className="mt-6">
-                <p className="text-xs font-semibold tracking-[0.18em] text-gold-400 uppercase">
+                <p className="text-xs font-semibold tracking-[0.18em] text-gold-300 uppercase">
                   Visi
                 </p>
                 <p className="mt-3 font-display text-lg leading-relaxed font-medium text-cream-50 sm:text-xl lg:text-[1.375rem]">
@@ -40,10 +40,10 @@ export function VisionMission() {
                 <Sparkles size={20} aria-hidden />
               </span>
               <div className="mt-6">
-                <p className="text-xs font-semibold tracking-[0.18em] text-forest-900/75 uppercase">
+                <p className="text-xs font-semibold tracking-[0.18em] text-pine-800/75 uppercase">
                   Motto
                 </p>
-                <p className="mt-3 font-display text-xl leading-snug font-semibold text-forest-950 sm:text-2xl">
+                <p className="mt-3 font-display text-xl leading-snug font-semibold text-pine-900 sm:text-2xl">
                   {visionMission.motto}
                 </p>
               </div>
@@ -57,7 +57,7 @@ export function VisionMission() {
                 <span className="grid h-11 w-11 place-items-center rounded-2xl border border-forest-700 bg-forest-950 text-gold-300">
                   <ListChecks size={20} aria-hidden />
                 </span>
-                <p className="text-xs font-semibold tracking-[0.18em] text-gold-400 uppercase">
+                <p className="text-xs font-semibold tracking-[0.18em] text-gold-300 uppercase">
                   Misi
                 </p>
               </div>
@@ -80,7 +80,7 @@ export function VisionMission() {
           {/* Nilai */}
           <Reveal variant="up" delay={190} className="lg:col-span-5">
             <div className="h-full rounded-4xl border border-forest-800 bg-forest-900 p-7 sm:p-9">
-              <p className="text-xs font-semibold tracking-[0.18em] text-forest-400 uppercase">
+              <p className="text-xs font-semibold tracking-[0.18em] text-forest-100 uppercase">
                 Nilai yang kami jaga
               </p>
               <ul className="mt-6 divide-y divide-forest-800">

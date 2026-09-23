@@ -56,7 +56,7 @@ export function MenuPreview() {
                   type="button"
                   onClick={() => setOpenIndex(index)}
                   aria-label={`Perbesar halaman ${page.page}: ${page.label}`}
-                  className="flex w-full flex-col rounded-4xl border border-gold-400/20 bg-cream-100 p-2.5 text-left shadow-soft outline-none transition-colors duration-300 hover:border-gold-400/55 focus-visible:ring-2 focus-visible:ring-gold-300 focus-visible:ring-offset-2 focus-visible:ring-offset-forest-950"
+                  className="flex w-full flex-col rounded-4xl border border-gold-400/20 bg-cream-100 p-2.5 text-left shadow-soft outline-none transition-colors duration-300 hover:border-gold-400/55 focus-visible:ring-2 focus-visible:ring-gold-300 focus-visible:ring-offset-2 focus-visible:ring-offset-pine-900"
                 >
                   <span className="relative block overflow-hidden rounded-3xl bg-forest-950">
                     <Image
@@ -71,17 +71,17 @@ export function MenuPreview() {
                       aria-hidden
                       className="absolute inset-0 grid place-items-center bg-forest-950/0 transition-colors duration-300 group-hover:bg-forest-950/25"
                     >
-                      <span className="grid h-11 w-11 place-items-center rounded-full bg-gold-400 text-forest-950 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                      <span className="grid h-11 w-11 place-items-center rounded-full bg-gold-400 text-pine-900 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                         <ZoomIn size={18} aria-hidden />
                       </span>
                     </span>
                   </span>
 
                   <span className="flex items-center justify-between gap-3 px-1.5 pt-3 pb-0.5">
-                    <span className="font-display text-sm font-semibold text-forest-950">
+                    <span className="font-display text-sm font-semibold text-pine-900">
                       {page.label}
                     </span>
-                    <span className="shrink-0 text-[11px] font-semibold tracking-[0.14em] text-forest-700 uppercase">
+                    <span className="shrink-0 text-[11px] font-semibold tracking-[0.14em] text-pine-700 uppercase">
                       Hal {page.page} / {priceListFile.pages}
                     </span>
                   </span>
