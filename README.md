@@ -228,7 +228,7 @@ Untuk menggantinya dengan foto dari Anda sendiri: taruh berkasnya di `public/ima
 
 ## Catatan desain
 
-- Palet hijau solid (forest 50–950): latar hijau tua dengan teks krem, aksen emas (gold 200–500).
+- Palet hijau solid (forest 50–950): latar tosca teal cerah dengan teks krem, aksen emas (gold 200–500).
   Beberapa permukaan sengaja krem (mis. bingkai halaman brosur & tombol utama). Tidak ada gradient.
 - Ikon memakai `lucide-react`; ikon merek sosial digambar inline di `components/ui/BrandIcons.tsx`
   karena Lucide v1 tidak lagi menyediakan ikon merek.

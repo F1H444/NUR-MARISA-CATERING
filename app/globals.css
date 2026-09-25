@@ -2,8 +2,8 @@
 
 /* ------------------------------------------------------------------
    Design tokens: Nur Marisa Catering
-   Tema hijau cerah (emerald segar): latar forest-950/900 yang lebih
-   terang, teks krem, aksen emas. Tidak ada gradient sama sekali,
+   Tema hijau cerah (emerald segar): latar forest-950/900 yang terang
+   dan segar, teks krem, aksen emas. Tidak ada gradient sama sekali,
    semua warna solid.
 
    Dua skala hijau punya peran berbeda:
@@ -13,17 +13,17 @@
                tetap tinggi dan tetap terasa satu keluarga warna.
 ------------------------------------------------------------------ */
 @theme {
-  --color-forest-950: #085e42;
-  --color-forest-900: #0d6b4a;
-  --color-forest-800: #117850;
-  --color-forest-700: #17875c;
-  --color-forest-600: #1f9a6b;
-  --color-forest-500: #2bad7c;
-  --color-forest-400: #55c69f;
-  --color-forest-300: #93dcc0;
-  --color-forest-200: #c9ecdb;
-  --color-forest-100: #e0f5ec;
-  --color-forest-50: #f0faf5;
+  --color-forest-950: #0c5f56;
+  --color-forest-900: #117064;
+  --color-forest-800: #158273;
+  --color-forest-700: #1b9484;
+  --color-forest-600: #22a795;
+  --color-forest-500: #2fbcab;
+  --color-forest-400: #62d0c0;
+  --color-forest-300: #a1e5d8;
+  --color-forest-200: #c7efe8;
+  --color-forest-100: #e0f7f1;
+  --color-forest-50: #f0fbf8;
 
   /* Hijau pekat khusus teks di atas permukaan terang */
   --color-pine-900: #06301f;
@@ -47,7 +47,7 @@
   /* Teks di atas permukaan emas/terang */
   --color-ink: #0a1a12;
   /* Teks pendukung di atas hijau cerah */
-  --color-ash: #cfe6da;
+  --color-ash: #cde5de;
 
   --font-sans: var(--font-body), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-heading), ui-sans-serif, system-ui, sans-serif;
